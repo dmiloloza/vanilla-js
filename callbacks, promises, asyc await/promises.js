@@ -17,7 +17,7 @@ function getPosts() {
       output += `<li>${post.title}</li>`
     });
     document.body.innerHTML = output
-  }, 1000);
+  }, 5000);
 }
 
 function createPosts(post) {
@@ -28,7 +28,7 @@ function createPosts(post) {
       const error = false;
 
       if (!error) {
-        resolve();
+        resolve(console.log('Success'));
       } else {
         reject('Error: Something went wrong');
       }
@@ -36,8 +36,6 @@ function createPosts(post) {
   })
 }
 
-createPosts({
-  title: 'Post Three',
-  body: 'This is post three'
-})
-.then(getPosts)
+createPosts({title: 'Post Three', body: 'This is post three'})
+  .then(getPosts)
+  .catch(error => console.error(error));
