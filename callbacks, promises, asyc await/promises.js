@@ -17,7 +17,7 @@ function getPosts() {
       output += `<li>${post.title}</li>`
     });
     document.body.innerHTML = output
-  }, 5000);
+  }, 3000);
 }
 
 function createPosts(post) {
@@ -32,7 +32,7 @@ function createPosts(post) {
       } else {
         reject('Error: Something went wrong');
       }
-    }, 2000)
+    }, 1000)
   })
 }
 
