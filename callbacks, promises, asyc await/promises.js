@@ -17,7 +17,7 @@ function getPosts() {
       output += `<li>${post.title}</li>`
     });
     document.body.innerHTML = output
-  }, 3000);
+  }, 1000);
 }
 
 function createPosts(post) {
@@ -36,6 +36,18 @@ function createPosts(post) {
   })
 }
 
-createPosts({title: 'Post Three', body: 'This is post three'})
-  .then(getPosts)
-  .catch(error => console.error(error));
+// createPosts({title: 'Post Three', body: 'This is post three'})
+//   .then(getPosts)
+//   .catch(error => console.error(error));
+
+//Promise.all
+
+const promise1 = Promise.resolve('Hello World');
+const promise2 = 10;
+const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Goodbye'));
+const promise4 = fetch(`https://jsonplaceholder.typicode.com/users`).then(response => response.json())
+
+Promise.all([promise1,promise2,promise3, promise4])
+  .then(result => console.log(result))
+  .catch(err => console.error(err))
+
