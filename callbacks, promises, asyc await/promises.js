@@ -40,8 +40,19 @@ function createPosts(post) {
 //   .then(getPosts)
 //   .catch(error => console.error(error));
 
-//Promise.all
+//Async-await it's way to handle responses
+async function init() {
+  //await wait for async processor action to complete
+  await createPosts({title: 'Post Three', body: 'This is post three'})//waiting this to get done before we move on and call getPosts() function
 
+  getPosts();
+}
+
+init();
+
+
+/*
+//Promise.all
 const promise1 = Promise.resolve('Hello World');
 const promise2 = 10;
 const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'Goodbye'));
@@ -50,4 +61,6 @@ const promise4 = fetch(`https://jsonplaceholder.typicode.com/users`).then(respon
 Promise.all([promise1,promise2,promise3, promise4])
   .then(result => console.log(result))
   .catch(err => console.error(err))
+
+*/
 
