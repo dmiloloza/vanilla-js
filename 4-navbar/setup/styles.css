@@ -224,7 +224,7 @@ nav {
     display: none;
   }
   .links {
-    height: auto;
+    height: auto; /*important do add*/
     display: flex;
   }
   .links a {
