@@ -120,4 +120,4 @@ function diplayMenuItems(menuItems) {
   // console.log(displayMenu);
 
   sectionCenter.innerHTML = displayMenu;
-}
+}l
