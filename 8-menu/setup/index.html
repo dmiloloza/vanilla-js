@@ -11,7 +11,43 @@
   </head>
 
   <body>
-    <h1>menu project</h1>
+    <section class='menu'>
+      <!--title-->
+      <div class='title'>
+        <h2>Jelovnik</h2>
+        <div class='underline'></div>
+      </div>
+      <!--filter buttons-->
+      <div class='btn-container'>
+        <button class='filter-btn' type='button' data-id='all'>all</button>
+        <button class='filter-btn' type='button' data-id='breakfast'>Breakfast</button>
+        <button class='filter-btn' type='button' data-id='lunch'>Lunch</button>
+        <button class='filter-btn' type='button' data-id='shakes'>shakes</button>
+      </div>
+
+      <!--menu items-->
+      <div class='section-center'>
+        <!--single item-->
+        <article class='menu-item'>
+          <img src='./menu-item.jpeg' class='photo' alt='menu item'>
+          <div class='item-info'>
+            <header>
+              <h4>Omlet s svjezim spinatom</h4>
+              <h4 class='price'>$15</h4>
+            </header>
+            <p class='item-text'>
+              Priprema: Jaja umutite s dvije žlice mlijeka, dodajte sol, papar i malo češnjaka u prahu.
+              Na malo vrućeg ulja izlijte jaja. Odmah smanjite vatru i poklopite.
+              U sredinu još polumekog omleta stavite mladi špinat i pospite s 2/3 parmezana, još kratko pecite,
+              pa djelomično preklopite omlet i ostavite ga poklopljenog u vrućoj tavi još 2-3 minute.
+              Pospite preostalim parmezanom i poslužite uz rajčicu.
+            </p>
+          </div>
+        </article>
+        <!--end of single item-->
+      </div>
+    </section>
+
     <!-- javascript -->
     <script src='app.js'></script>
   </body>
