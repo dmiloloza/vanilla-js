@@ -250,7 +250,7 @@ Menu
     max-width: 40rem;
   }
   .photo {
-    height: 260px;
+    height: 170px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -259,6 +259,6 @@ Menu
     grid-template-columns: 1fr 1fr;
   }
   .photo {
-    height: 260px;
+    height: 150px;
   }
 }
